@@ -1,0 +1,57 @@
+<odoo>
+
+    <data>
+        <record id="customer_details_list" model="ir.ui.view">
+            <field name="name">customerdetails list</field>
+            <field name="model">customer.details</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="check_number"/>
+                    <field name="amount"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="customer_details_view_form" model="ir.ui.view">
+            <field name="name">customer.details.view.form</field>
+            <field name="model">customer.details</field>
+            <field name="arch" type="xml">
+                <form string="">
+            <sheet>
+                <header>
+                    <button string="Confirm" name="btn_confirm" type="object" class="oe_highlight" states="draft"/>
+                    <button string="Cancel" name="btn_cancel" type="object" states="confirmed,cancelled"/>
+                     <button string="Register" name="btn_register" type="object" class="oe_highlight" states="confirmed"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,confirmed,registered"/>
+                </header>
+                <group>
+                    <field name="name"/>
+                    <field name="check_number"/>
+                    <field name="amount"/>
+                    <field name="phone_no"/>
+                    <field name="email"/>
+                </group>
+            </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="customer_details_action" model="ir.actions.act_window">
+            <field name="name">Customer Details</field>
+            <field name="res_model">customer.details</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem
+            id="customer_details_menu1"
+            name="CUSTOMER"/>
+
+        <menuitem
+                id="customer_details_menu2"
+                name="customer details"
+                action="customer_details_action"
+                parent="customer_details_menu1"/>
+    </data>
+
+</odoo>
