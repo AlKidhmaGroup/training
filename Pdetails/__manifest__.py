@@ -28,7 +28,7 @@
         'views/views.xml',
         'report/abc_purchase_report_templates.xml',
         'report/abc_purchase_reports.xml',
-        'data/pur_demo.xml',
+       # 'data/pur_demo.xml',
     ],
     # only loaded in demonstration mode
     #'demo': [
