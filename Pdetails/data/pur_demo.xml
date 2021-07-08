@@ -1,0 +1,14 @@
+<!--<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="purchase_user_demo" model="product.category">
+
+             <field name="display_name">new furniture added</field>
+        </record>
+
+    </data>
+
+
+</odoo>-->
+

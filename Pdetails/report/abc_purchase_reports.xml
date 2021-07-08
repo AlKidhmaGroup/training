@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <report
+            string="Print Me"
+            id="report_purchase_quotation_test"
+            model="purchase.order"
+            report_type="qweb-pdf"
+            name="Pdetails.report_purchaseorder_document"
+            file="Pdetails.report_purchaseorder_document"
+            print_report_name="'Request for Quotation - %s' % (object.name)"
+        />
+
+
+    </data>
+</odoo>
+

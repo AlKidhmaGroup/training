@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="evaluation_customer_view_form" model="ir.ui.view">
+            <field name="name">evaluation.customer.view.form</field>
+            <field name="model">evaluation.customer</field>
+            <field name="arch" type="xml">
+               <form string="">
+                   <header>
+                     <button string="confirm" name="my_confirm" type="object"/>
+                     <field name="state"  widget="statusbar" statusbar_visible="confirm,cancel,none"/>
+                   </header>
+
+                   <group>
+
+                                <field name="name"/>
+                                <field name="ch_number"/>
+                                <field name="amount"/>
+
+
+                    </group>
+
+               </form>
+
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="evaluation_customer_action_window">
+              <field name="name">evaluation</field>
+              <field name="res_model">evaluation.customer</field>
+              <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem name="Customer Details" id="evaluation_customer_menu_root"/>
+        <menuitem name="Customers" id="evaluation_customer_menu_1" parent="evaluation_customer_menu_root"/>
+        <menuitem name="Details" id="evaluation_customer_menu_1_list" parent="evaluation_customer_menu_1" action="evaluation_customer_action_window"/>
+
+    </data>
+
+</odoo>
